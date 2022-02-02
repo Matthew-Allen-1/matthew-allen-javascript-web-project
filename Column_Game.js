@@ -47,48 +47,8 @@ function node(element, state) {
 //Assign Box Elements
 for (let i = 0; i < columns; i++) {
     for (let j = i; j < columns; j++) {
-        switch (i) {
-            case 0: switch(j) {
-                case 0: box[i][j] = new node(document.querySelector('#r1c1'), 0); break;
-                case 1: box[i][j] = new node(document.querySelector('#r1c2'), 0); break;
-                case 2: box[i][j] = new node(document.querySelector('#r1c3'), 0); break;
-                case 3: box[i][j] = new node(document.querySelector('#r1c4'), 0); break;
-                case 4: box[i][j] = new node(document.querySelector('#r1c5'), 0); break;
-                case 5: box[i][j] = new node(document.querySelector('#r1c6'), 0); break;
-            };
-            break;
-            case 1: switch(j) {
-                case 1: box[i][j] = new node(document.querySelector('#r2c2'), 0); break;
-                case 2: box[i][j] = new node(document.querySelector('#r2c3'), 0); break;
-                case 3: box[i][j] = new node(document.querySelector('#r2c4'), 0); break;
-                case 4: box[i][j] = new node(document.querySelector('#r2c5'), 0); break;
-                case 5: box[i][j] = new node(document.querySelector('#r2c6'), 0); break;
-            };
-            break;
-            case 2: switch(j) {
-                case 2: box[i][j] = new node(document.querySelector('#r3c3'), 0); break;
-                case 3: box[i][j] = new node(document.querySelector('#r3c4'), 0); break;
-                case 4: box[i][j] = new node(document.querySelector('#r3c5'), 0); break;
-                case 5: box[i][j] = new node(document.querySelector('#r3c6'), 0); break;
-            };
-            break;
-            case 3: switch(j) {
-                case 3: box[i][j] = new node(document.querySelector('#r4c4'), 0); break;
-                case 4: box[i][j] = new node(document.querySelector('#r4c5'), 0); break;
-                case 5: box[i][j] = new node(document.querySelector('#r4c6'), 0); break;
-            };
-            break;
-            case 4: switch(j) {
-                case 4: box[i][j] = new node(document.querySelector('#r5c5'), 0); break;
-                case 5: box[i][j] = new node(document.querySelector('#r5c6'), 0); break;
-            };
-            break;
-            case 5: switch(j) {
-                case 5: box[i][j] = new node(document.querySelector('#r6c6'), 0); break;
-            };
-            break;
-        };
-        box[i][j].x[0].style = "display: none;"; box[i][j].x[1].style = "display: none;"
+        box[i][j] = new node(document.querySelector(`#r${i+1}c${j+1}`), 0); 
+        box[i][j].x[0].style = "display: none;"; box[i][j].x[1].style = "display: none;";
     }
 }
 
@@ -338,12 +298,10 @@ changeSettingsButton.addEventListener('click', function() {
     }
 });
 
-
 // Listen for the user to see game stats.
 statsButton.addEventListener('click', function() {
     alert(`${player[0].name} has ${player[0].wins} wins and ${player[0].losses} losses.  ${player[1].name} has ${player[1].wins} wins and ${player[1].losses} losses.`);
 });
-
 
 // Listen for the user to reload the page.
 reloadButton.addEventListener('mousedown', function() {window.location.reload();});
@@ -428,4 +386,3 @@ function setMessage(msg, color, q) {
     if (q == 1) {message1.textContent = msg; message1.style.color = color;}
     else {message2.textContent = msg; message2.style.color = color;}
 }
-

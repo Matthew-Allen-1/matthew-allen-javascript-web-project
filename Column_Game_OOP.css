@@ -1,0 +1,57 @@
+/* Container styles. */
+.container {
+    margin: 10px 10px; 
+    width: 2000px; 
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading styles. */
+h1 {font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif: 48px; color: black; text-align: center;}
+h2 {font-size: 24px; color: darkblue;}
+#rules li {font-size: 16px; color: darkblue; line-height: 16px;}
+
+/* Settings styles. */
+#settings, #game {
+    margin-bottom: 20px;
+    border: 2px dashed darkgrey;
+    padding: 15px 15px 0 15px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.settings-box {
+    width: 60px;
+    height: 38px;
+    margin: 5px 0 5px 10px;
+}
+
+#settings input {padding: 1px 6px;}
+#settings-button {margin-top: 10px; width: 200px; align-self: center;}
+#settings p {margin: 0; font-size: 16px;}
+#settings label {display: inline-block; margin: 0 5px;}
+#settings form {margin: 0;}
+
+/* Game styles. */
+#game {align-items: center;}
+
+/* #box-container {margin: 0 116px;} */
+    #row1 {margin-left: 20px;}
+    #row2 {margin-left: 79px;}
+    #row3 {margin-left: 138px;}
+    #row4 {margin-left: 197px;}
+    #row5 {margin-left: 256px;}
+    #row6 {margin-left: 315px;}
+
+.message1, .message2 {margin: 10px 0 10px 0; font-size: 20px;}
+
+/* Buttons and hover settings. */
+#settings-button, #confirm-move-button, #restart-button, #play-again-button, #stats-button {background-color: rgb(200, 241, 200);}
+#play-again-button, #see-stats-button, #change-settings-button, #reload-button {width: 160px; margin: 0 5px;;}
+#reload-button {background-color: orange}
+rect:hover {transform: scale(1.1)}
+
