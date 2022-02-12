@@ -1,4 +1,4 @@
-/* Container styles. */
+/* Container styles */
 .container {
     margin: 10px 10px; 
     width: 2000px; 
@@ -8,12 +8,12 @@
     align-items: center;
 }
 
-/* Heading styles. */
+/* Heading styles */
 h1 {font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif: 48px; color: black; text-align: center;}
 h2 {font-size: 24px; color: darkblue;}
 #rules li {font-size: 16px; color: darkblue; line-height: 16px;}
 
-/* Settings styles. */
+/* Settings styles */
 #settings, #game {
     margin-bottom: 20px;
     border: 2px dashed darkgrey;
@@ -26,32 +26,27 @@ h2 {font-size: 24px; color: darkblue;}
 
 .settings-box {
     width: 60px;
-    height: 38px;
+    height: 30px;
     margin: 5px 0 5px 10px;
 }
 
 #settings input {padding: 1px 6px;}
 #settings-button {margin-top: 10px; width: 200px; align-self: center;}
-#settings p {margin: 0; font-size: 16px;}
+#settings .question {margin: 0; font-size: 16px;}
 #settings label {display: inline-block; margin: 0 5px;}
 #settings form {margin: 0;}
 
-/* Game styles. */
+/* Game styles */
 #game {align-items: center;}
+table {table-layout: fixed; border-collapse: collapse;}
+td {padding: 0; height: 64px; width: 64px; border: 1px solid white; text-align: center;}
+svg {height: 50px; width: 50px; margin: 5px 0 0 0}
 
-/* #box-container {margin: 0 116px;} */
-    #row1 {margin-left: 20px;}
-    #row2 {margin-left: 79px;}
-    #row3 {margin-left: 138px;}
-    #row4 {margin-left: 197px;}
-    #row5 {margin-left: 256px;}
-    #row6 {margin-left: 315px;}
+.message1, .message2, .message3 {margin: 10px 0 10px 0; font-size: 20px; text-align: center;}
 
-.message1, .message2 {margin: 10px 0 10px 0; font-size: 20px;}
-
-/* Buttons and hover settings. */
-#settings-button, #confirm-move-button, #restart-button, #play-again-button, #stats-button {background-color: rgb(200, 241, 200);}
-#play-again-button, #see-stats-button, #change-settings-button, #reload-button {width: 160px; margin: 0 5px;;}
+/* Buttons and hover settings */
+#settings-button, #confirm-move-button, #change-settings-button, #play-again-button, #see-stats-button {background-color: rgb(200, 241, 200);}
+#play-again-button, #see-stats-button, #change-settings-button, #reload-button {width: 160px; margin: 0 20px;}
 #reload-button {background-color: orange}
-rect:hover {transform: scale(1.1)}
-
+#settings-button:hover, #confirm-move-button:hover, #change-settings-button:hover, #play-again-button:hover, #see-stats-button:hover, #reload-button:hover {transform: scale(1.05);}
+svg:hover {transform: scale(1.1);}

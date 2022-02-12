@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Column_Game_OOP.css">
     <title>Number Guesser Deluxe</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Don't Strike Out the Last Box!</h1>
@@ -21,148 +22,26 @@
         </div>
 
         <div id="settings">
-            <p>How many columns would you like to use (1 - 6)? <input type="number" min = 2 max = 6 class="settings-box get-columns"></p>
-            <p>Would you like to go first? 
+            <p class = "question">How many columns would you like to use (2 - 6)? <input type="number" min = 2 max = 6 class="settings-box get-columns"></p>
+            <p class = "question">Would you like to go first? 
                 <input type="radio" class = "get-first" id="yes" name="first" value="Optimally" checked = "checked"><label for="yes">Yes</label>
                 <input type="radio" class = "get-first" id="no" name="first" value="Randomly"><label for="no">No</label>
             </p>
-            <p>What difficulty level would you like (1 - 10)? <input type="number" min = 0 max = 10 class="settings-box get-level"></p>
-            <p>What is your name? <input type="string" class="settings-box get-name"></p>
+            <p class = "question">What difficulty level would you like (0 - 10)? <input type="number" min = 0 max = 10 class="settings-box get-level" ></p>
+            <p class = "question"> What is your name? <input type="string" class="settings-box get-name"></p>
             <input type="submit" value="Use these settings" id="settings-button">
+            <p class="message3"></p>
         </div>
-
         <div id = "game">
             <div id = "box-container">
-                <span id="row6">
-                    <svg id = "r6c6" class = "r6 c6" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207); stroke-width:1.5; stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                </span></br>
-
-                <span id="row5">
-                    <svg id = "r5c5" class = "r5 c5"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r5c6" class = "r5 c6"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                </span></br>
-                
-                <span id="row4">
-                    <svg id = "r4c4" class = "r4 c5"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r4c5" class = "r4 c5"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r4c6" class = "r4 c6"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                </span> </br>
-
-                <span id="row3">
-                    <svg id = "r3c3" class = "r3 c3" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r3c4" class = "r3 c4" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r3c5" class = "r3 c5" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r3c6" class = "r3 c6"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-            
-                </span> </br>
-
-                <span id="row2">
-                    <svg id = "r2c2" class = "r2 c2" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r2c3" class = "r2 c3" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r2c4" class = "r2 c4" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r2c5" class = "r2 c5" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r2c6" class = "r2 c6"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                </span> </br>
-
-                <span id="row1">
-                    <svg id = "r1c1" class = "r1 c1" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r1c2" class = "r1 c2" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r1c3" class = "r1 c3" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r1c4" class = "r1 c4" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r1c5" class = "r1 c5" width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                    <svg id = "r1c6" class = "r1 c6"width="55" height="55">
-                        <rect width="50" height="50" style="fill:rgb(178, 178, 207);stroke-width:1.5;stroke:rgb(0,0,0);"/>
-                        <line class = "x" x1="10" y1="10" x2="40" y2="40"/>
-                        <line class = "x" x1="40" y1="10" x2="10" y2="40"/>
-                    </svg>
-                </span> </br></br>
+                <table>
+                    <tbody id="book-list"></tbody>
+                </table>
             </div>
-
             <p class="message1"></p>
             <input type="submit" id="confirm-move-button">
             <p class="message2"></p>
         </div>
-
         <span class = "button-container">
             <input type="submit" value="Play Again" id="play-again-button">
             <input type="submit" value="See Game Stats" id="see-stats-button">
@@ -171,9 +50,7 @@
             <input type="submit" value="Change Settings" id="change-settings-button">
             <input type="submit" value="Reload Page" id="reload-button">
         </span> </br>
-
     </div>
-
 <script src = "Column_Game_OOP.js"></script>
 </body>
 
